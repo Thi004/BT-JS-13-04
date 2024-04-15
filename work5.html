@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>work5</title>
+</head>
+<body>
+<h4>Yêu cầu: Xếp hạng học lực hs dựa vào điểm kiểm tra, điểm giữa kỳ, điểm cuối kỳ</h4>
+<input type="number" placeholder="Nhập điểm kiểm tra" id="a">
+<input type="number" placeholder="Nhập điểm kiểm tra" id="b">
+<input type="number" placeholder="Nhập điểm kiểm tra" id="c">
+<button onclick="xepHang()">Xếp hạng</button>
+<p id="kq"></p>
+<script>9
+    function xepHang () {
+        let a = document.getElementById('a').value;
+        let b = document.getElementById('b').value;
+        let c = document.getElementById('c').value;
+        let dtb = (a+b+c)/3 ;
+        if ( dtb >=0 && dtb<5) {
+            document.getElementById('kq').innerHTML = 'Điẻm trung bình là:' + dtb + ' Xếp hạng : Yếu';
+        } else if (dtb >=5 && dtb<8) {
+            document.getElementById('kq').innerHTML = 'Điẻm trung bình là:' + dtb + ' Xếp hạng : Khá';
+        } else if (dtb>=8 && dtb<10) {
+            document.getElementById('kq').innerHTML = 'Điẻm trung bình là:' + dtb + ' Xếp hạng : Giỏi';
+        } else {
+            document.getElementById('kq').innerHTML = ' Không hợp lệ';
+        }
+    }
+
+</script>
+</body>
+</html>

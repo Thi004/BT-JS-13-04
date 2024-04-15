@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>work1</title>
+</head>
+<body>
+<h4>Yêu cầu: nhập vào 2 số a và b, kiểm tra xem a có chia hết cho b hay không</h4>
+<input type="number" placeholder="Nhập a" id="a">
+<input type="number" placeholder="Nhập b" id="b">
+<button onclick="kiemTra()">Kiểm tra</button>
+<br>
+<p id="kq"></p>
+<script>
+    function kiemTra () {
+        let a = document.getElementById('a').value;
+        let b = document.getElementById('b').value;
+        if(a % b == 0) {
+            document.getElementById('kq').innerHTML = 'a chia hết cho b';
+        } else {
+            document.getElementById('kq').innerHTML = 'a không chia hết cho b';
+        }
+    }
+</script>
+</body>
+</html>

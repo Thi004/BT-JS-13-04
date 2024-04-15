@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>work4</title>
+</head>
+<body>
+<h4>Yêu cầu: Nhập 3 số nguyên và tìm ra số nguyên có giá trị lớn nhất</h4>
+<input type="number" placeholder="Nhập số" id="a">
+<input type="number" placeholder="Nhập số" id="b">
+<input type="number" placeholder="Nhập số" id="c">
+<button onclick="findMax()">Tìm số lớn nhất</button>
+<br>
+<p style="color: green" id="kq"></p>
+<script>
+    function findMax() {
+        let a = document.getElementById('a').value;
+        let b = document.getElementById('b').value;
+        let c = document.getElementById('c').value;
+        let maxvalue;
+        if (a>b && a>c) {
+            maxvalue = a ;
+            document.getElementById('kq').innerHTML = 'Số lớn nhất là số' +a;
+        }
+        else if (b>a && b>c) {
+            maxvalue = b;
+            document.getElementById('kq').innerHTML = 'Số lớn nhất là số '+b;
+        } else {
+            maxvalue = c;
+            document.getElementById('kq').innerHTML = 'Số lớn nhất là số '+c;
+        }
+    }
+</script>
+</body>
+</html>
